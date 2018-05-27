@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>Ksenija Dobrovolska REBC03</title>
+    <style type="text/css">
+</style>
+</head>
+<body style="margin: 50px; text-align:center;">
+
+    <div style="text-align: center;">
+        <h1>Vienkāršu elektrisku shēmu modelēšana</h1>
+        <h3>Ksenija Dobrovoļska REBC03</h3>    
+    </div>
+
+    <div style="text-align: left">
+        <h2>Saturs:</h2>
+        <ol style="list-style-type:none">
+            <li><a href="#t">Teorētiska daļa</a></li>
+            <li>
+                <ol style="list-style-type:none">
+                    <li><a href="#11">1.1. Ķēdes aprēķins</a></li>
+                </ol>
+            </li>
+            <li><a href="#p">Praktiskā daļa</a></li>
+            <li>
+                <ol style="list-style-type:none">
+                    <li><a href="#21">2.1. Darbs ar GEDA programmām</a></li>
+                    <li>
+                        <ol style="list-style-type:none">
+                            <li><a href="#211">2.1.1. darbs ar gschem</a></li>
+                            <li><a href="#212">2.1.2. darbs ar gnetlist</a></li>
+                            <li><a href="#213">2.1.3. darbs ar ngspice</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#22">2.2 Darbs ar QUCS programmām</a></li>
+                </ol>
+            </li>
+            <li><a href="#l">Literatūras saraksts</a></li>
+            <li><a href="#s">Secinajumi</a></li>
+        </ol>    
+    </div>
+
+    <h1>1. nodaļa</h1>
+    <h1 id="t">Teorētiska daļa</h1>
+    <h2 id="11">1.1. Ķēdes aprēķins</h2>
+    <p>Varianta aprēķins:</p>
+    <p>
+        Apliecības numurs ir 171REB108. <a href="#bib.1">[1]</a> Aprēķinot pēc formulas sanāk ka V1 būs vienāds ar 108/10=10.8 V , R1 būs vienāds ar 0+1 un tas ir R1=1 Oms, un R2=8+1=9 Omi. <a href="#bib.2">[2]</a>
+    </p>
+    <table align="center">
+        <tr><td>R1</td><td>1 Oms</td></tr>
+        <tr><td>R2</td><td>9 Omi</td></tr>
+        <tr><td>V1</td><td>10.8 V</td></tr>
+        <tr><td>UR1</td><td>10.8 V</td></tr>
+        <tr><td>UR2</td><td>9.7 V</td></tr>
+    </table>
+    <p><sub>1.1. tabula: datu tabula</sub></p>
+
+    <img src=".\sc1.png">
+    <p><sub>1.1. zīm.: shēma ar circuitikz paķeti</sub></p>
+    
+    <img src="./sc2.png">
+    <p><sub>1.2. zīm.: plots ar pgfplots paķeti</sub></p>
+    
+
+    <h1>Praktiskā daļa</h1>
+    <h2 id="21">2.1. Darbs ar GEDA programmām</h2>
+    <h3 id="211">2.1.1. darbs ar gschem</h3>
+    <img src="./1.png">
+    <p><sub>2.1. zīm.: Shēma veidota ar gschem</sub></p>
+
+    <h3 id="212">2.1.2. darbs ar gnetlist</h3>
+    <p>* Spice netlister for gnetlist</p>
+    <p>R2 2 0 9</p>
+    <p>R1 1 2 1</p>
+    <p>V1 1 0 10.8</p>
+    <p>.END</p>
+
+    <h3 id="213">2.1.3. darbs ar ngspice</h3>
+    <img src="./r1.png">
+    <p><sub>2.2. zīm.: R1 simulācijas grafiks</sub></p>
+
+    <img src="./r2.png">
+    <p><sub>2.3. zīm.: R2 simulācijas grafiks</sub></p>
+
+
+
+    <h2 id="22">2.2 Darbs ar QUCS programmām</h2>
+
+    <img src="./2.png">
+    <p><sub>2.4. zīm.: Shēma QUCS vidē</sub></p>
+
+
+    <img src="./kq1.png">
+    <p><sub>2.5. zīm.: Sweep simulacija</sub></p>
+
+    <img src="./kq2.png">
+    <p><sub>2.6. zīm.: Sweep grafiks</sub></p>
+
+    <h1 id="l">Literatūras saraksts</h1>
+    <p id="bib.1">
+        [1] 3. Baltakmens, [R. Latvietis un viņa zirgi]. Rīga: Valters un Rapa, 2000. 282 lpp. ISBN 9984-59-540-4
+    </p>
+
+    <p id="bib.2">
+        [2] Strazds, M. (red.) [Latvijas ūdeņu putni]. Rīga: Jāņa sēta, 1999. 208 lpp. ISBN 9984-9180-4-1                
+    </p>
+
+    <h1 id="s">Secinājumi</h1>
+    <p>Pēc manām domām izveidot dokumenta saturu ar html valodu bija daudz grūtāk jo cik es varēju redzēt tur ir daudz vairāk opciju priekš visāda veida vizuāla izklāsta ka arī html mājas lapas veidošana ir ne tik saprotama ka latex dokumenta izveide. Latex piedāvā vieglu veidu kā izveidot dokumentus ar vienoto noformējumu kad html valodā tev vispirms vajag izveidot pašu noformējumu un tikai pēc tam varēsi ievietot kaut ko iekšā lapā.</p>
+    <h3>Github lab. darbi.</h3>
+    <p>
+        <a href="https://github.com/dobrova/P03">P03</a>
+        <a href="https://github.com/dobrova/po4">P04</a>
+    </p>
+
+</body>
+</html>
